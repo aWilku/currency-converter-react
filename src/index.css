@@ -7,10 +7,10 @@ html {
 }
 
 body {
-  margin: auto;
   background-image: url("../src/background.jpg");
   background-color: #f0f0f0;
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Lato', sans-serif;
+  
 }

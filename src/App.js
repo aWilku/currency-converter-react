@@ -1,15 +1,16 @@
 import Header from "./Header";
 import Form from "./Form";
+import Container from "./Container";
 
 function App() {
   return (
-    <main>
+    <Container>
       <Header
         title="Wolf Kalkulator"
       />
-
       <Form />
-    </main>
+    </Container>
+
   );
 }
 
