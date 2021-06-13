@@ -1,0 +1,13 @@
+.header {
+    background-color: #254870;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px auto;
+    width: 95%;
+    max-width: 500px;
+}
+
+.header__title {
+    color: #ffffff;
+    margin: 5px;
+}

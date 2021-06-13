@@ -1,10 +1,11 @@
+import Header from "./Header";
 
 function App() {
   return (
     <main>
-      <header className="header">
-        <h1 className="header__title">Wolf Kalkulator</h1>
-      </header>
+      <Header
+        title="Wolf Kalkulator"
+      />
 
       <form className="form">
         <fieldset className="form__fieldset">
