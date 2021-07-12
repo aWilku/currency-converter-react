@@ -27,18 +27,8 @@ const Form = () => (
                 </label>
             </p>
         </fieldset>
-
         <p>
             <button className="form__button">Przelicz</button>
-        </p>
-
-        <fieldset className="form__fieldset form__fieldset--special">
-            <legend className="form__legend">Otrzymasz:</legend>
-            <p className="form__paragraph"><strong></strong></p>
-        </fieldset>
-
-        <p>
-            <button className="form__button" type="reset">Wyczyść kalkulator</button>
         </p>
     </form>
 );

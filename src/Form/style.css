@@ -16,28 +16,11 @@
     border-radius: 5px;
 }
 
-.form__fieldset--special {
-    text-align: center;
-}
-
-.form__legend {
-    text-align: center;
-    background-color: #254870;
-    border: 2px solid #ffffff;
-    border-radius: 5px;
-    padding: 5px 10px;
-    font-size: 18px;
-}
-
 .form__labelText {
     display: inline-block;
     width: 100%;
     max-width: 100px;
     margin: 0 10px 5px 0;
-}
-
-.form__paragraph {
-    margin: 0;
 }
 
 .form__field {
