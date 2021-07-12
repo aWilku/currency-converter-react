@@ -1,10 +1,14 @@
 import "./style.css"
 import { useState } from "react";
+import { currencies } from "../currencies.js"
 
 const Form = () => {
     const [amount, setAmount] = useState("");
+    const [currency, setCurrency] = useState(currencies[0].shortcut)
+    
     const onFormSubmit = (event) => {
         event.preventDefault();
+        console.log(`${amount}`)
     };
 
     return (
@@ -25,6 +29,7 @@ const Form = () => {
                             max="999999999"
                             step="0.01"
                             placeholder="Wpisz kwotę"
+                            autoFocus
                             required />
                     </label>
                 </p>
@@ -35,12 +40,19 @@ const Form = () => {
                         </span>
                         <select
                             className="form__field"
-                            name="requestedCurrency" required>
-                            <option value="" disabled selected>Wybierz walutę</option>
-                            <option value="EUR">EUR</option>
-                            <option value="CHF">CHF</option>
-                            <option value="USD">USD</option>
-                            <option value="GBP">GBP</option>
+                            name="requestedCurrency"
+                            value={currency}
+                            onChange={({ target }) => setCurrency(target.value)}
+                            required
+                        >
+                            {currencies.map(currency => (
+                                <option
+                                    key={currency.shortcut}
+                                    value={currency.shortcut}
+                                >
+                                    {currency.name}
+                                </option>
+                            ))};
                         </select>
                     </label>
                 </p>
