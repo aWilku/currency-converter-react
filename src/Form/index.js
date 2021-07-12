@@ -41,6 +41,6 @@ const Form = () => (
             <button className="form__button" type="reset">Wyczyść kalkulator</button>
         </p>
     </form>
-)
+);
 
 export default Form;

@@ -10,8 +10,7 @@ function App() {
       />
       <Form />
     </Container>
-
   );
-}
+};
 
 export default App;
