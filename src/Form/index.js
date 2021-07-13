@@ -2,13 +2,13 @@ import "./style.css"
 import { useState } from "react";
 import { currencies } from "../currencies.js"
 
-const Form = () => {
+const Form = ({ calculateResult }) => {
     const [amount, setAmount] = useState("");
     const [currency, setCurrency] = useState(currencies[0].shortcut)
-    
+
     const onFormSubmit = (event) => {
         event.preventDefault();
-        console.log(`${amount}`)
+        calculateResult(amount, currency);
     };
 
     return (

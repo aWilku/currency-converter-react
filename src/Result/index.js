@@ -1,10 +1,15 @@
 import "./style.css"
 
-const Result = () => (
+const Result = ({ result }) => (
     <p className="container__result">
-        <strong>
-            
-        </strong>
+        {result !== undefined && (
+            <>
+                <strong>
+                    {result.givenAmount.toFixed(2)}&nbsp;PLN&nbsp;=&nbsp;
+                    {result.finalAmount.toFixed(2)}&nbsp;{result.currency}
+                </strong>
+            </>
+        )}
     </p>
 );
 
