@@ -8,6 +8,7 @@ import Clock from "./Clock";
 
 function App() {
   const [result, setResult] = useState();
+  
   const calculateResult = (amount, currency) => {
     const rate = currencies.find(({ shortcut }) => shortcut === currency).rate;
 
