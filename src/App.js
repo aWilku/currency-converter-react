@@ -1,10 +1,9 @@
 import Header from "./Header";
 import Form from "./Form";
 import Container from "./Container";
-import Result from "./Result";
 import { useState } from "react";
 import { currencies } from "./currencies";
-import Clock from "./Clock";
+
 
 function App() {
   const [result, setResult] = useState();
@@ -24,11 +23,8 @@ function App() {
       <Header
         title="Wolf Kalkulator"
       />
-      <Clock />
       <Form
         calculateResult={calculateResult}
-      />
-      <Result
         result={result}
       />
     </Container>

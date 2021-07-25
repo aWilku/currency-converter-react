@@ -1,8 +1,10 @@
 import "./style.css"
 import { useState } from "react";
 import { currencies } from "../currencies"
+import Result from "./Result";
+import Clock from "./Clock";
 
-const Form = ({ calculateResult }) => {
+const Form = ({ calculateResult, result }) => {
     const [amount, setAmount] = useState("");
     const [currency, setCurrency] = useState(currencies[0].shortcut);
 
@@ -13,6 +15,7 @@ const Form = ({ calculateResult }) => {
 
     return (
         <form className="form" onSubmit={onFormSubmit}>
+            <Clock />
             <fieldset className="form__fieldset">
                 <p>
                     <label>
@@ -60,6 +63,7 @@ const Form = ({ calculateResult }) => {
             <p>
                 <button className="form__button">Przelicz</button>
             </p>
+            <Result result={result} />
         </form>
     );
 };
