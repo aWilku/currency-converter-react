@@ -1,8 +1,16 @@
-import { StyledForm, StyledFieldset, StyledText, StyledField, StyledButton } from "./styled";
+import {
+    StyledForm,
+    StyledFieldset,
+    StyledText,
+    StyledField,
+    Styledlabel
+} from "./styled";
 import { useState } from "react";
 import { currencies } from "../currencies"
 import Result from "./Result";
 import Clock from "./Clock";
+import Buttons from "./Buttons";
+
 
 const Form = ({ calculateResult, result }) => {
     const [amount, setAmount] = useState("");
@@ -17,50 +25,44 @@ const Form = ({ calculateResult, result }) => {
         <StyledForm onSubmit={onFormSubmit}>
             <Clock />
             <StyledFieldset>
-                <p>
-                    <label>
-                        <StyledText>
-                            Kwota w PLN:
-                        </StyledText>
-                        <StyledField
-                            value={amount}
-                            onChange={({ target }) => setAmount(target.value)}
-                            name="amount"
-                            type="number"
-                            min="0.01"
-                            max="999999999"
-                            step="0.01"
-                            placeholder="Wpisz kwotę"
-                            autoFocus
-                            required />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <StyledText>
-                            Waluta:
-                        </StyledText>
-                        <StyledField as="select"
-                            name="requestedCurrency"
-                            value={currency}
-                            onChange={({ target }) => setCurrency(target.value)}
-                            required
-                        >
-                            {currencies.map(currency => (
-                                <option
-                                    key={currency.shortcut}
-                                    value={currency.shortcut}
-                                >
-                                    {currency.name}
-                                </option>
-                            ))};
-                        </StyledField>
-                    </label>
-                </p>
+                <Styledlabel>
+                    <StyledText>
+                        Kwota w PLN:
+                    </StyledText>
+                    <StyledField
+                        value={amount}
+                        onChange={({ target }) => setAmount(target.value)}
+                        name="amount"
+                        type="number"
+                        min="0.01"
+                        max="999999999"
+                        step="0.01"
+                        placeholder="Wpisz kwotę"
+                        autoFocus
+                        required />
+                </Styledlabel>
+                <Styledlabel>
+                    <StyledText>
+                        Waluta:
+                    </StyledText>
+                    <StyledField as="select"
+                        name="requestedCurrency"
+                        value={currency}
+                        onChange={({ target }) => setCurrency(target.value)}
+                        required
+                    >
+                        {currencies.map(currency => (
+                            <option
+                                key={currency.shortcut}
+                                value={currency.shortcut}
+                            >
+                                {currency.name}
+                            </option>
+                        ))};
+                    </StyledField>
+                </Styledlabel>
             </StyledFieldset>
-            <p>
-                <StyledButton>Przelicz</StyledButton>
-            </p>
+            <Buttons text="Przelicz" />
             <Result result={result} />
         </StyledForm>
     );
