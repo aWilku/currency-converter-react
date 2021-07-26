@@ -1,10 +1,10 @@
+import { StyledClock } from "./styled";
 import { useCurrentDate } from "../../useCurrentDate";
-import "./style.css"
 
 const Clock = () => {
     const date = useCurrentDate();
     return (
-        <p className="clock">
+        <StyledClock>
             Dziaj jest
             {" "}
             {date.toLocaleString(undefined, {
@@ -16,7 +16,7 @@ const Clock = () => {
                 minute: "2-digit",
                 second: "2-digit"
             })}
-        </p>
+        </StyledClock>
     );
 };
 
