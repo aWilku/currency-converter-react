@@ -22,7 +22,7 @@ export const Styledlabel = styled.label`
     align-items: center;
     margin: 10px 0;
     
-    @media(max-width: ${({ theme }) => theme.brekpoint.tablet}px){
+    @media(max-width: ${({ theme }) => theme.breakpoints.tablet}px){
         flex-direction: column;
         align-items: flex-start;
     }
@@ -33,7 +33,7 @@ export const StyledText = styled.span`
     margin: 0 10px 0 0;
     font-size: 20px;
     
-    @media(max-width: ${({ theme }) => theme.brekpoint.tablet}px){
+    @media(max-width: ${({ theme }) => theme.breakpoints.tablet}px){
         flex-basis: 30px;
     }
 `;
