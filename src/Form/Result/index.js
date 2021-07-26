@@ -5,7 +5,8 @@ const Result = ({ result }) => (
         {result !== undefined && (
             <>
                 <strong>
-                    {result.givenAmount.toFixed(2)}&nbsp;PLN&nbsp;=&nbsp;
+                    {result.givenAmount.toFixed(2)}&nbsp;PLN&nbsp;=
+                    {" "}
                     {result.finalAmount.toFixed(2)}&nbsp;{result.currency}
                 </strong>
             </>
