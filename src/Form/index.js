@@ -1,4 +1,4 @@
-import "./style.css"
+import { StyledForm, StyledFieldset, StyledText, StyledField, StyledButton } from "./styled";
 import { useState } from "react";
 import { currencies } from "../currencies"
 import Result from "./Result";
@@ -14,16 +14,15 @@ const Form = ({ calculateResult, result }) => {
     };
 
     return (
-        <form className="form" onSubmit={onFormSubmit}>
+        <StyledForm onSubmit={onFormSubmit}>
             <Clock />
-            <fieldset className="form__fieldset">
+            <StyledFieldset>
                 <p>
                     <label>
-                        <span className="form__labelText">
+                        <StyledText>
                             Kwota w PLN:
-                        </span>
-                        <input
-                            className="form__field"
+                        </StyledText>
+                        <StyledField
                             value={amount}
                             onChange={({ target }) => setAmount(target.value)}
                             name="amount"
@@ -38,11 +37,10 @@ const Form = ({ calculateResult, result }) => {
                 </p>
                 <p>
                     <label>
-                        <span className="form__labelText">
+                        <StyledText>
                             Waluta:
-                        </span>
-                        <select
-                            className="form__field"
+                        </StyledText>
+                        <StyledField as="select"
                             name="requestedCurrency"
                             value={currency}
                             onChange={({ target }) => setCurrency(target.value)}
@@ -56,15 +54,15 @@ const Form = ({ calculateResult, result }) => {
                                     {currency.name}
                                 </option>
                             ))};
-                        </select>
+                        </StyledField>
                     </label>
                 </p>
-            </fieldset>
+            </StyledFieldset>
             <p>
-                <button className="form__button">Przelicz</button>
+                <StyledButton>Przelicz</StyledButton>
             </p>
             <Result result={result} />
-        </form>
+        </StyledForm>
     );
 };
 

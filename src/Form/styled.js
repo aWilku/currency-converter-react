@@ -1,4 +1,6 @@
-.form {
+import styled from "styled-components";
+
+export const StyledForm = styled.form`
     width: 85%;
     max-width: 500px;
     padding: 10px;
@@ -7,31 +9,31 @@
     color: #ffffff;
     border: 2px solid #d6d6d6;
     border-radius: 10px;
-}
+`;
 
-.form__fieldset {
+export const StyledFieldset = styled.fieldset`
     padding: 10px;
     margin: 10px 0;
     border: 2px solid #254870;
     border-radius: 5px;
-}
+`;
 
-.form__labelText {
+export const StyledText = styled.span`
     display: inline-block;
     width: 100%;
     max-width: 100px;
     margin: 0 10px 5px 0;
-}
+`;
 
-.form__field {
+export const StyledField = styled.input`
     width: 100%;
     max-width: 300px;
     border: 1px solid #254870;
     border-radius: 5px;
     padding: 5px;
-}
+`;
 
-.form__button {
+export const StyledButton = styled.button`
     width: 100%;
     background-color: #0080B1;
     color: #ffffff;
@@ -39,12 +41,12 @@
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
-}
 
-.form__button:hover {
-    background-color: #336399;
-}
+    &:hover{
+        background-color: #336399;
+    }
 
-.form__button:active {
-    background-color: #407bbf;
-}
+    &:active{
+        background-color: #407bbf;
+    }
+`;
