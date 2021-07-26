@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
     background-image: url("${background}");
-    background-color: #f0f0f0;
+    background-color: ${({ theme }) => theme.colors.gallery};
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Lato', sans-serif; 

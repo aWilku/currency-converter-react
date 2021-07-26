@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
-    background-color: #254870;
+    background-color: ${({ theme }) => theme.colors.astronaut};
     border-radius: 5px;
     text-align: center;
     margin: 10px auto;
@@ -10,6 +10,6 @@ export const StyledHeader = styled.header`
 `;
 
 export const StyledTitle = styled.h1`
-    color: #ffffff;
+    color: ${({ theme }) => theme.colors.white};
     margin: 5px;
 `;

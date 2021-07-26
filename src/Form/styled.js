@@ -5,16 +5,16 @@ export const StyledForm = styled.form`
     max-width: 800px;
     padding: 10px 10px 0;
     margin: 10px auto;
-    background-color: #ffffff26;
-    color: #ffffff;
-    border: 2px solid #d6d6d6;
+    background-color: ${({ theme }) => theme.colors.transparentWhite};
+    color: ${({ theme }) => theme.colors.white};
+    border: 2px solid ${({ theme }) => theme.colors.alto};
     border-radius: 10px;
 `;
 
 export const StyledFieldset = styled.fieldset`
     padding: 10px;
     margin: 10px 0;
-    border: 2px solid #254870;
+    border: 2px solid ${({ theme }) => theme.colors.astronaut};
     border-radius: 5px;
 `;
 export const Styledlabel = styled.label`
@@ -22,7 +22,7 @@ export const Styledlabel = styled.label`
     align-items: center;
     margin: 10px 0;
     
-    @media(max-width: 768px){
+    @media(max-width: ${({ theme }) => theme.brekpoint.tablet}px){
         flex-direction: column;
         align-items: flex-start;
     }
@@ -33,7 +33,7 @@ export const StyledText = styled.span`
     margin: 0 10px 0 0;
     font-size: 20px;
     
-    @media(max-width: 768px){
+    @media(max-width: ${({ theme }) => theme.brekpoint.tablet}px){
         flex-basis: 30px;
     }
 `;
@@ -41,7 +41,7 @@ export const StyledText = styled.span`
 export const StyledField = styled.input`
     flex-grow:1;
     width: 100%;
-    border: 1px solid #254870;
+    border: 1px solid ${({ theme }) => theme.colors.astronaut};
     border-radius: 5px;
     padding: 5px;
     font-size: 20px;
