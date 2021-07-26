@@ -5,7 +5,6 @@ export const StyledClock = styled.p`
     font-size: 12px;
     color: white;
     text-align: right;
-    margin: 10px auto;
-    max-width: 500px;
-    padding: 5px;
+    margin: 0 auto 10px;
+    padding: 5px 0;
 `;

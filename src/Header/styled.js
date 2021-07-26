@@ -5,8 +5,8 @@ export const StyledHeader = styled.header`
     border-radius: 5px;
     text-align: center;
     margin: 10px auto;
-    width: 95%;
-    max-width: 500px;
+    width: 85%;
+    max-width: 800px;
 `;
 
 export const StyledTitle = styled.h1`
