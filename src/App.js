@@ -21,7 +21,7 @@ function App() {
   return (
     <Container>
       <Header
-        title="Wolf Kalkulator"
+        title="Przelicznik walut"
       />
       <Form
         calculateResult={calculateResult}

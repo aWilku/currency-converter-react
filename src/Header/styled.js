@@ -12,4 +12,5 @@ export const StyledHeader = styled.header`
 export const StyledTitle = styled.h1`
     color: ${({ theme }) => theme.colors.white};
     margin: 5px;
+    padding:5px;
 `;
