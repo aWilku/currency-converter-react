@@ -7,20 +7,19 @@ export const StyledButtonContainer = styled.div`
 
 export const StyledButton = styled.button`
     flex-basis: 300px;
-    background-color: ${({ theme }) => theme.colors.buttonColors.deepCerulean};
+    background-color: ${({ theme }) => theme.colors.astronaut};
     color: ${({ theme }) => theme.colors.white};
-    border: 1px solid ${({ theme }) => theme.colors.white};
+    border: 1px solid ${({ theme }) => theme.colors.black};
     border-radius: 5px;
     padding: 10px;
-    transition: 0.5s;
+    transition: 1s;
     cursor: pointer;
 
     &:hover{
-        background-color: ${({ theme }) => theme.colors.buttonColors.azure};
-        transform: scale(1.05);
+        background-color: ${({ theme }) => theme.colors.azure};
     }
 
     &:active{
-        background-color: ${({ theme }) => theme.colors.buttonColors.steelBlue};
+        background-color: ${({ theme }) => theme.colors.steelBlue};
     }
 `;

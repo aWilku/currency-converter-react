@@ -5,9 +5,9 @@ export const StyledForm = styled.form`
     max-width: 800px;
     padding: 10px 10px 0;
     margin: 10px auto;
-    background-color: ${({ theme }) => theme.colors.transparentWhite};
+    background-color: ${({ theme }) => theme.colors.gallery};
     color: ${({ theme }) => theme.colors.white};
-    border: 2px solid ${({ theme }) => theme.colors.alto};
+    border: 2px solid ${({ theme }) => theme.colors.astronaut};
     border-radius: 10px;
 `;
 
@@ -32,6 +32,7 @@ export const StyledText = styled.span`
     flex-basis: 165px;
     margin: 0 10px 0 0;
     font-size: 20px;
+    color: ${({ theme }) => theme.colors.black};
     
     @media(max-width: ${({ theme }) => theme.breakpoints.tablet}px){
         flex-basis: 30px;
