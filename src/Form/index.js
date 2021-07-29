@@ -3,13 +3,15 @@ import {
     StyledFieldset,
     StyledText,
     StyledField,
-    Styledlabel
+    Styledlabel,
+    StyledButtonContainer,
+    StyledButton
 } from "./styled";
 import { useState } from "react";
 import { currencies } from "../currencies"
 import Result from "./Result";
 import Clock from "./Clock";
-import Buttons from "./Buttons";
+
 
 
 const Form = ({ calculateResult, result }) => {
@@ -62,7 +64,9 @@ const Form = ({ calculateResult, result }) => {
                     </StyledField>
                 </Styledlabel>
             </StyledFieldset>
-            <Buttons text="Przelicz" />
+            <StyledButtonContainer>
+                <StyledButton>Przelicz</StyledButton>
+            </StyledButtonContainer>
             <Result result={result} />
         </StyledForm>
     );
