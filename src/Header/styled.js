@@ -9,7 +9,7 @@ export const StyledHeader = styled.header`
     max-width: 800px;
 `;
 
-export const StyledTitle = styled.h1`
+export const Title = styled.h1`
     color: ${({ theme }) => theme.colors.white};
     margin: 5px;
     padding:5px;
