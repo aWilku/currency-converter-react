@@ -1,5 +1,5 @@
 import { StyledClock } from "./styled";
-import { useCurrentDate } from "../../useCurrentDate";
+import { useCurrentDate } from "./useCurrentDate";
 
 const Clock = () => {
     const date = useCurrentDate();
